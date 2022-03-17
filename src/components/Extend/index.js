@@ -30,7 +30,7 @@ function Extend(props) {
   return (
     <div className="detail">
     <Typography variant='h3' component='h3'>
-        Số liệu COVID-19 hôm nay tại Việt Nam
+        Số liệu COVID-19 Việt Nam
       </Typography>
         <div className="col-4 p-5 input mb-3">
           <input onChange={e => setSearch(e.target.value)} type="text" className="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2" />
