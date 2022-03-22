@@ -1,10 +1,13 @@
-import React from 'react';
-import Tracker from './components/Tracker';
+import React, { useEffect, useState } from 'react'; 
+import NavBar from './components/Nav/NavBar';
+import NewsHome from './components/Pages/NewsHome';
 
 function App(props) {
+ 
   return (
     <div>
-      <Tracker/>
+      <NavBar />  
+      <NewsHome/>
 
     </div>
   );

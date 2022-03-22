@@ -1,0 +1,13 @@
+.card {
+    margin: 12px 12px;
+    width: 30%;
+    text-decoration: none;
+    color: #000;
+  }
+  .loading {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

@@ -3,17 +3,36 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
+import CovidVN from './components/Pages/CovidVietNam';
+import Word from './components/Pages/CovidWord';
+import NewsCovid from './components/Pages/NewsCovid';
+import About from './components/Pages/About';
+import Contact from './components/Pages/Contact';
+import NavBar from './components/Nav/NavBar';
+import ScrollToTop from './components/Nav/ScrollToTop';
+import Footer from './components/Nav/Footer';
 
 ReactDOM.render(
-  <React.StrictMode><BrowserRouter>
-  <Routes>
+  <React.StrictMode>
+    <BrowserRouter>
+      <Routes>
 
-    <Route path='/' element={<App />}/>
+        <Route path='/' element={<App />}/>
+        <Route path='/' element={<NavBar />}>
+          <Route path='/newscovid' element={<NewsCovid />}/>
+          <Route path='/covidvn' element={<CovidVN />}/>
+          <Route path='/covidword' element={<Word />}/>
+          <Route path='/about' element={<About />}/>
+          <Route path='/contact' element={<Contact />}/>
+        </Route>
+        
+      </Routes>
+    </BrowserRouter>
+    
+    <ScrollToTop />
+    <Footer/>
 
-
-  </Routes>
-</BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
