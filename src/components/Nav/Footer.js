@@ -13,7 +13,6 @@ const Footer=()=> {
     return (
 
         <>
-            {/* eighth section for footer*/}
             <footer className="section-three">
                 <div className="container">
                     <div className="row">
@@ -34,7 +33,7 @@ const Footer=()=> {
                                         id="floatingInput"
                                         placeholder="Headline..."
                                     />
-                                    <label for="floatingInput">Email</label>
+                                    <label htmlFor="floatingInput">Email</label>
                                     <button className="btn btn-primary mt-2">Subscribe</button>
                                 </div>
                             </form>
@@ -45,7 +44,7 @@ const Footer=()=> {
 
             <div className="footer">
                 <div className="container">
-                    <a style={{ color: '#888', borderRight: '1px dotted #f1f1f1' }}>Copyright 2022 , All Rights Deserve </a>
+                    <a style={{ color: '#888'}}>Copyright 2022 , All Rights Deserve </a><br></br>
                     <a style={{ color: '#888', marginLeft: '5px' }}>Privacy&Policy</a>
                 </div>
             </div>

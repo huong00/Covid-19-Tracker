@@ -12,12 +12,11 @@ function NewsCovid() {
         setLoading(false)
     }
     useEffect(() => { getNews() }, [])
-    console.log(news);
     
 
     const renderNews = () => {
-        return loading ? <div className='loading'><RingLoader color='#D78536' loading={loading} size={60} /></div>:news.map((n) => (
-                <a href={n.share_url} target='_blank' className="card-covid">
+        return loading ? <div className='loading'><RingLoader color='#D78536' loading={loading} size={60} /></div>:news.map((n, index) => (
+                <a key={index} href={n.share_url} target='_blank' className="card-covid">
                     <div className="row g-0">
                         <div className="col-md-4">
                             <img src={n.thumbnail_url} className="img-fluid rounded-start" alt="API error" />

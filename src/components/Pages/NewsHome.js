@@ -15,23 +15,25 @@ function NewsHome() {
     
 
     const renderNews = () => {
-        return loading ? <div className='loading'><RingLoader color='#D78536' loading={loading} size={60} /></div>:news.map((n) => (
-                <a href={n.share_url} target='_blank' className='card'>
-                    <div className="">
-                        <img src={n.thumbnail_url} className="card-img-top" alt="API error"/>
-                        <div className="card-body">
-                            <h5 className="card-title">{n.title}</h5>
-                            <p className="card-text">{n.lead}</p>
-                            <p className="card-text"><small className="text-muted">Last updated now</small></p>
+        return loading ? <div className='loading'><RingLoader color='#D78536' loading={loading} size={60} /></div>:news.map((n, index) => (
+                <div className='col-md-4'>
+                    <a key={index} href={n.share_url} target='_blank' className='card'>
+                        <div className="">
+                            <img src={n.thumbnail_url} className="card-img-top" alt="API error"/>
+                            <div className="card-body">
+                                <h5 className="card-title">{n.title}</h5>
+                                <p className="card-text">{n.lead}</p>
+                                <p className="card-text"><small className="text-muted">Last updated now</small></p>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
         ))
     }
     return (
         <div className='container'>
             <div className='row'>
-                {renderNews()}
+                    {renderNews()}
             </div>
         </div>
     );

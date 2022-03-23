@@ -6,8 +6,8 @@ import Weather from "./Weather";
 const Navmenu = () => {
     return (
                 <>
-                    <nav className="navbar p-3">
                         <div className="container">
+                    <nav className="navbar p-3">
                             <div className="left-content">
                                 <Link className="link menu-item" to="/">Trang chủ</Link>
                                 <Link className="link menu-item" to="/newscovid">Tin tức y tế</Link>
@@ -24,22 +24,21 @@ const Navmenu = () => {
                             </div>
 
                             <div className="right-content">
-                                <div className="date">
-                                    <Link className="link" to="/"><i className="fa fa-search"></i></Link>
-                                    <Link className="link" to="/"><i className="fa fa-user-circle"></i></Link>
+                                <div className="search-select">
+                                    <Link className="link" to="#"><i className="fa fa-search"></i></Link>
                                     <select>
                                         <option>Vie</option>
                                         <option>Eng</option>
                                     </select>
                                 </div>
-                                <div className="social">
+                                <div className="weather-home">
                                     <Weather />
                                 </div>
                             </div>
 
+                    </nav>
                         </div>
 
-                    </nav>
                 </>
     )
 }

@@ -5,7 +5,7 @@ import NewsHome from './components/Pages/NewsHome';
 function App(props) {
  
   return (
-    <div>
+    <div className='container-fluid'>
       <NavBar />  
       <NewsHome/>
 

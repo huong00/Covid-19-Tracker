@@ -18,15 +18,13 @@ function CovidVN(props) {
 
   const renderCovids = () => {
     return covids.map((covid, index) => covid.name.toLowerCase().includes(search.toLowerCase().trim(), 0) ?
-      <>
-        <tr>
+        <tr key={index}>
           <th>{index+1}</th>
           <th>{covid.name}</th>
           <td>{covid.cases}</td>
           <td>{covid.death}</td>
           <td>{covid.casesToday}</td>
-        </tr>
-      </> : ""
+        </tr> :("")
     )
   }
 

@@ -1,8 +1,9 @@
 .card {
-    margin: 12px 12px;
-    width: 30%;
     text-decoration: none;
     color: #000;
+    margin-top: 10px;
+    min-height: 500px;
+    
   }
   .loading {
     height: 50vh;

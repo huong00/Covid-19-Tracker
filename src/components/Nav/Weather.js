@@ -22,7 +22,6 @@ class Weather extends React.Component {
   
     fetchData = () => {
       const url = this.buildUrlApi();
-      console.log("api", url);
   
       axios.get(url).then(response => {
         this.setState({
