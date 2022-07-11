@@ -16,7 +16,7 @@ function NewsHome() {
 
     const renderNews = () => {
         return loading ? <div className='loading'><RingLoader color='#D78536' loading={loading} size={60} /></div>:news.map((n, index) => (
-                <div className='col-md-4'>
+                <div key={index} className='col-md-4'>
                     <a key={index} href={n.share_url} target='_blank' className='card'>
                         <div className="">
                             <img src={n.thumbnail_url} className="card-img-top" alt="API error"/>
