@@ -1,4 +1,4 @@
-Live demo: https://sleepy-goldwasser-ae6833.netlify.app/
+Live demo:
 
 # Getting Started with Create React App
 
